@@ -21,7 +21,7 @@ Additonally a daily shutdown is protecting you against unwanted costs.
 
  1. Install packages: **`apt-get update && apt-get install -y git screen jq openjdk-11-jdk-headless`**
  2. Git clone this repository: `git clone ...`
- 3. Move instance template files into the user directory: **`mv aws-on-demand/instance_templates/minecraft-server/* /home/ubuntu`**
+ 3. Move instance template files into the user directory: **`mv aws-on-demand/instance_templates/minecraft_server/* /home/ubuntu`**
  4. Remove the remaining folder: **`rm -r aws-on-demand`**
  5. Go into your home directory: **`cd /home/ubuntu`**
  6. Drop your minecraft server into the minecraft folder exactly like *`minecraft/server.jar`*

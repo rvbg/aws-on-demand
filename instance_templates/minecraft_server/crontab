@@ -1,0 +1,3 @@
+@reboot /home/ubuntu/sequence.sh
+*/5 * * * * /home/ubuntu/autostop.sh
+0 5 * * * sudo /sbin/shutdown -P +1

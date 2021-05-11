@@ -1,0 +1,2 @@
+# Required parameter for aws-on-demand
+eula=true

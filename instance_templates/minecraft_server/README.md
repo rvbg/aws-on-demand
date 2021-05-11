@@ -25,12 +25,13 @@ Additonally a daily shutdown is protecting you against unwanted costs.
  4. Remove the remaining folder: **`rm -r aws-on-demand`**
  5. Go into your home directory: **`cd /home/ubuntu`**
  6. Drop your minecraft server into the minecraft folder exactly like *`minecraft/server.jar`*
- 7. Make all bash scripts executable: **`chmod +x cloudflare-ddns-update.sh && chmod +x sequence.sh && chmod +x autostop.sh`**
+ 7. Make all bash scripts executable: **`chmod +x cloudflare-ddns-update.sh && chmod +x sequence.sh && chmod +x autostop.sh && chmod +x discord-webhook.sh`**
  8. Edit *`sequence.sh`* and put in your minecraft server launch parameters. I recommend 3072MB RAM for a t3.medium.
  9. Edit *`cloudflare-ddns-update.sh`* and put in your Cloudflare credentials. If you use a different DNS service, supply your own update script.
- 10. Run the script manually to check if your credentials are working: **`./cloudflare-ddns-update.sh`**
- 11. Apply the cronjobs: **`sudo crontab /home/ubuntu/crontab -u ubuntu`**
- 12. Restart the instance to start the sequence: **`sudo shutdown -r now`**
+ 10. Edit *`discord-webhook.sh`* and put in your Discord Webhook URL. If you do not want to use this feature, remove the calling line in *sequence.sh*.
+ 11. Run the script manually to check if your credentials are working: **`./cloudflare-ddns-update.sh`**
+ 12. Apply the cronjobs: **`sudo crontab /home/ubuntu/crontab -u ubuntu`**
+ 13. Restart the instance to start the sequence: **`sudo shutdown -r now`**
 
 ## Other
 #### Connect to the  console

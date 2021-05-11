@@ -20,7 +20,7 @@ Additonally a daily shutdown is protecting you against unwanted costs.
 ## Getting started
 
  1. Install packages: **`apt-get update && apt-get install -y git screen jq openjdk-11-jdk-headless`**
- 2. Git clone this repository: `git clone ...`
+ 2. Git clone this repository: `git clone https://github.com/rvbg/aws-on-demand`
  3. Move instance template files into the user directory: **`mv aws-on-demand/instance_templates/minecraft_server/* /home/ubuntu`**
  4. Remove the remaining folder: **`rm -r aws-on-demand`**
  5. Go into your home directory: **`cd /home/ubuntu`**
@@ -29,7 +29,7 @@ Additonally a daily shutdown is protecting you against unwanted costs.
  8. Edit *`sequence.sh`* and put in your minecraft server launch parameters. I recommend 3072MB RAM for a t3.medium.
  9. Edit *`cloudflare-ddns-update.sh`* and put in your Cloudflare credentials. If you use a different DNS service, supply your own update script.
  10. Edit *`discord-webhook.sh`* and put in your Discord Webhook URL. If you do not want to use this feature, remove the calling line in *sequence.sh*.
- 11. Run the script manually to check if your credentials are working: **`./cloudflare-ddns-update.sh`**
+ 11. Run the DDNS script manually to check if your credentials are working: **`./cloudflare-ddns-update.sh`**
  12. Apply the cronjobs: **`sudo crontab /home/ubuntu/crontab -u ubuntu`**
  13. Restart the instance to start the sequence: **`sudo shutdown -r now`**
 

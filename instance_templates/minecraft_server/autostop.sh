@@ -27,7 +27,7 @@ LIST=$(tail -n 1 $LOGPATH | cut -f2 -d"/" | cut -f2 -d":")
 
 if [ "$LIST" = "$EMPTY" ] || [ "$LIST" = "$EMPTYNEW" ]
 then
-        $(screen -S minecraft -p 0 -X stuff "say [AWS] Server is empty. Shutting down in $SLEEP. ^M")
+        $(screen -S minecraft -p 0 -X stuff "say [AWS] Server is empty. Eventually shutting down in $SLEEP. ^M")
         sleep $SLEEP
 
         $(screen -S minecraft -p 0 -X stuff "list^M")

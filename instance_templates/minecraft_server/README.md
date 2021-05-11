@@ -2,7 +2,7 @@
 
 ## Behavior
 When booting, a DNS entry is updated in order to reach the instance. Then the Minecraft server is started.
-Every 5 minutes a script checks whether someone is on the Minecraft server. If the server is empty, the player list will be checked again after 10 minutes. If no one joined, the Minecraft server receives a stop command.
+Every 5 minutes a script checks whether someone is on the Minecraft server. If the server is empty, the player list will be checked again after 8 minutes. If no one joined, the Minecraft server receives a stop command.
 When the Minecraft server gets stopped, a shutdown command will be issued.
 Additonally a daily shutdown is protecting you against unwanted costs.
 

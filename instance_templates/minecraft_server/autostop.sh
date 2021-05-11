@@ -4,7 +4,7 @@
 LOGPATH="/home/ubuntu/minecraft/logs/latest.log"
 
 #Sleeptime before final shutdown
-SLEEP=10m
+SLEEP=8m
 
 #Default Minecraft empty list return
 EMPTY=" There are 0 of a max 20 players online"

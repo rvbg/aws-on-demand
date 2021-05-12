@@ -1,12 +1,18 @@
 # Minecraft Server
 
-## Behavior
-When booting, a DNS entry is updated in order to reach the instance. Then the Minecraft server is started.
-Every 5 minutes a script checks whether someone is on the Minecraft server. If the server is empty, the player list will be checked again after 8 minutes. If no one joined, the Minecraft server receives a stop command.
-When the Minecraft server gets stopped, a shutdown command will be issued.
-Additonally a daily shutdown is protecting you against unwanted costs.
+## Features
+ - ✅ implemented
+ - ⬜ not implemented/ideas
 
-**Please make sure that this self-shutdown works**, I am not responsible for any excess server time. 
+| Status | Feature |
+|--|--|
+| ✅ | Start the Minecraft server on boot. |
+| ✅ | Reattach to the server console. |
+| ✅ | Checks cyclically whether someone is on the server and shuts the instance down if necessary. |
+| ✅ | Daily backup shutdown to protect you against unwanted costs. |
+| ✅ | Cloudflare DNS update. |
+| ✅ | Discord WebHook notification on boot and shutdown. |
+| ⬜ | Some sort of Minecraft proxy server setup to bypass the slow DNS solution. |
 
 ## AWS EC2 Setup
  - Instance type: *t3.medium*
@@ -20,7 +26,7 @@ Additonally a daily shutdown is protecting you against unwanted costs.
 ## Getting started
 
  1. Install packages: **`apt-get update && apt-get install -y git screen jq openjdk-11-jdk-headless`**
- 2. Git clone this repository: `git clone https://github.com/rvbg/aws-on-demand`
+ 2. Git clone this repository: **`git clone https://github.com/rvbg/aws-on-demand`**
  3. Move instance template files into the user directory: **`mv aws-on-demand/instance_templates/minecraft_server/* /home/ubuntu`**
  4. Remove the remaining folder: **`rm -r aws-on-demand`**
  5. Go into your home directory: **`cd /home/ubuntu`**
@@ -38,5 +44,5 @@ Additonally a daily shutdown is protecting you against unwanted costs.
 `screen -x`
 
 #### Client DNS-Problems
-If your Minecraft client is very slow getting the updated DNS entry, use `ipconfig /flushdns`.
+If your client is very slow getting the updated DNS entry, use `ipconfig /flushdns` on Windows.
 You can even enter this command as an automated MultiMC start-up command.

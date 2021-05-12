@@ -13,7 +13,7 @@ def checkForm():
     inputPass = request.form['pass']
 
     if inputPass == os.environ['FORMPASSWORD']:
-        message = "Start command send!"
+        message = "Start requested successfully!"
         client = boto3.client(
             'ec2',
             aws_access_key_id=os.environ['AWSACCESSKEYID'],
